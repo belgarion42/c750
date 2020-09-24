@@ -1,0 +1,15 @@
+In this project I will be exploring OpenStreetMap data for Irvine, California. I chose this map data because Irvine is my current city of residence. I am already pretty familiar with the area, which will potentially help me recognize some of the bad data in the set. At the same time, I'm curious about some aspects of my city and I will use this data set to glean some new insights about it.
+
+The data consists of XML elements called "nodes" (points of interest) and "ways" (linear features and area boundaries). Each element can have one or more tags associated with it. These tags provide more details and information about the element. Additional information about the data structure can be found here: https://wiki.openstreetmap.org/wiki/OSM_XML
+
+I will first explore the raw XML data using Python and audit tags that are appear to have errors, and tags that I'm interested in analyzing in more detail. Due to the scope of this project, I will not be cleaning every error I find, but will focus on two or three to meet the requirements of the project. After identifying and cleaning the problem areas, I will export the data to CSV files, then import it into a SQLite database. Finally, I will query the database to gain greater insights.
+
+Map Area
+On OpenStreetMap.org, the area I selected to include as much of Irvine I could without too much data from other cities is bounded within the following coordinates:
+
+Longitude: -117.8792, -117.7281
+Latitude: 33.7301, 33.6135
+
+The map can be found here: https://www.openstreetmap.org/search?query=Irvine%2C%20CA#map=12/33.7299/-117.8232.
+
+The underlying data was downloaded using the Overpass API, at this link: https://overpass-api.de/api/map?bbox=-117.8792,33.6135,-117.7281,33.7301.
